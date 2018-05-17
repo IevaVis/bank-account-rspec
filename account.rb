@@ -13,6 +13,7 @@ class Account
   end
 
   def acct_number
+    #length is hidden except for the last four digits
     hidden_length = @acct_number.length - 4
     @acct_number.sub(Regexp.new("^.{#{hidden_length}}"), "*" * hidden_length)
   end
